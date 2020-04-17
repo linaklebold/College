@@ -1,0 +1,42 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+IOError: Couldn't find file 'game/music/main-menu-theme.m4a'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "C:\Users\Galina\Desktop\game\renpy-7.2.0-sdk\renpy\ast.py", line 896, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Galina\Desktop\game\renpy-7.2.0-sdk\renpy\python.py", line 1929, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+  File "C:\Users\Galina\Desktop\game\renpy-7.2.0-sdk\renpy\ui.py", line 289, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Galina\Desktop\game\renpy-7.2.0-sdk\renpy\display\core.py", line 2687, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\Galina\Desktop\game\renpy-7.2.0-sdk\renpy\display\core.py", line 3357, in interact_core
+    renpy.audio.audio.periodic()
+  File "C:\Users\Galina\Desktop\game\renpy-7.2.0-sdk\renpy\audio\audio.py", line 1019, in periodic
+    six.reraise(exc[0], exc[1], exc[2])
+  File "C:\Users\Galina\Desktop\game\renpy-7.2.0-sdk\renpy\audio\audio.py", line 997, in periodic_thread_main
+    periodic_pass()
+  File "C:\Users\Galina\Desktop\game\renpy-7.2.0-sdk\renpy\audio\audio.py", line 938, in periodic_pass
+    c.periodic()
+  File "C:\Users\Galina\Desktop\game\renpy-7.2.0-sdk\renpy\audio\audio.py", line 420, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "C:\Users\Galina\Desktop\game\renpy-7.2.0-sdk\renpy\audio\audio.py", line 72, in load
+    rv = renpy.loader.load(fn)
+  File "C:\Users\Galina\Desktop\game\renpy-7.2.0-sdk\renpy\loader.py", line 576, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'game/music/main-menu-theme.m4a'.
+
+Windows-8-6.2.9200
+Ren'Py 7.2.0.424
+Політех. Шлях до успіху 1.0
+Fri Apr 03 13:58:23 2020
